@@ -24,9 +24,9 @@ export default function CookieBanner() {
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 bg-dark-bg text-white p-4 shadow-lg border-t border-slate-700">
+    <div className="fixed bottom-0 left-0 right-0 z-50 bg-dark-bg text-white p-4 shadow-lg border-t border-neutral-700">
       <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p className="text-sm text-slate-300 text-center sm:text-left">
+        <p className="text-sm text-neutral-300 text-center sm:text-left">
           We use cookies for analytics to improve our site. By accepting, you
           agree to our use of Google Analytics cookies.{" "}
           <a href="/privacy" className="underline hover:text-white">
@@ -36,7 +36,7 @@ export default function CookieBanner() {
         <div className="flex gap-3 shrink-0">
           <button
             onClick={handleDecline}
-            className="px-4 py-2 text-sm font-medium text-slate-300 border border-slate-600 hover:bg-slate-800 transition-colors cursor-pointer"
+            className="px-4 py-2 text-sm font-medium text-neutral-300 border border-neutral-600 hover:bg-neutral-800 transition-colors cursor-pointer"
           >
             Decline
           </button>

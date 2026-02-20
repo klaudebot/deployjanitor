@@ -2,20 +2,20 @@
 
 @theme {
   --color-background: #ffffff;
-  --color-surface: #f7f8fc;
-  --color-surface-raised: #eef0f6;
-  --color-border: #e5e7eb;
-  --color-border-strong: #d1d5db;
-  --color-text-primary: #0f172a;
-  --color-text-secondary: #475569;
-  --color-text-muted: #94a3b8;
-  --color-accent: #4f6df5;
-  --color-accent-hover: #3b5ae0;
-  --color-accent-subtle: #eef1fd;
-  --color-accent-border: #c4cef8;
-  --color-success: #22c55e;
-  --color-dark-bg: #0b1120;
-  --color-dark-surface: #162032;
+  --color-surface: #f6f7f5;
+  --color-surface-raised: #eceee9;
+  --color-border: #dfe1db;
+  --color-border-strong: #caced0;
+  --color-text-primary: #1a1d1a;
+  --color-text-secondary: #4a524a;
+  --color-text-muted: #8a928a;
+  --color-accent: #4d912e;
+  --color-accent-hover: #3e7625;
+  --color-accent-subtle: #eef5ea;
+  --color-accent-border: #bdd6ad;
+  --color-success: #4d912e;
+  --color-dark-bg: #151816;
+  --color-dark-surface: #222624;
   --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
@@ -32,12 +32,12 @@
 
 
 .dot-grid {
-  background-image: radial-gradient(circle, #dde1ef 1px, transparent 1px);
+  background-image: radial-gradient(circle, #dde0da 1px, transparent 1px);
   background-size: 28px 28px;
 }
 
 .gradient-accent {
-  background: linear-gradient(90deg, #4f6df5, #7c5bf0);
+  background: linear-gradient(90deg, #4d912e, #6aad4a);
 }
 
 .legal-prose h2 {
