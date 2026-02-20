@@ -84,7 +84,7 @@ export default function Pricing() {
                     : document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
                 }
                 className={cn(
-                  "w-full rounded-lg px-6 py-3 font-semibold transition-colors text-sm",
+                  "w-full rounded-lg px-6 py-3 font-semibold transition-colors text-sm cursor-pointer relative z-10",
                   tier.featured
                     ? "bg-accent text-white hover:bg-accent-hover shadow-sm"
                     : "border border-border-strong bg-white text-text-secondary hover:bg-surface"

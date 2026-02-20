@@ -28,6 +28,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+button, [role="button"] {
+  cursor: pointer;
+}
+
 .dot-grid {
   background-image: radial-gradient(circle, #e2e8f0 1px, transparent 1px);
   background-size: 28px 28px;
