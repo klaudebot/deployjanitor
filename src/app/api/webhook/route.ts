@@ -18,7 +18,7 @@ export async function POST(req: NextRequest) {
     event = stripe.webhooks.constructEvent(
       body,
       signature,
-      process.env.STRIPE_WEBHOOK_SECRET!
+      process.env.STRIPE_WEBHOOK_SECRET!.trim()
     );
   } catch (err) {
     console.error("Webhook signature verification failed:", err);
@@ -59,19 +59,20 @@ async function handleCheckoutComplete(session: Stripe.Checkout.Session) {
 
   // Notify yourself of the new order
   try {
+    const smtpUser = process.env.SMTP_USER?.trim();
     const transporter = nodemailer.createTransport({
       host: "smtp.office365.com",
       port: 587,
       secure: false,
       auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
+        user: smtpUser,
+        pass: process.env.SMTP_PASS?.trim(),
       },
     });
 
     await transporter.sendMail({
-      from: process.env.SMTP_USER,
-      to: process.env.SMTP_USER,
+      from: smtpUser,
+      to: smtpUser,
       subject: `New order: ${amountPaid} from ${customerEmail || "unknown"}`,
       html: `
         <h2>New Deploy Janitor Order</h2>

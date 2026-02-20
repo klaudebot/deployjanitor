@@ -6,8 +6,8 @@ export async function POST(req: NextRequest) {
     const { priceId } = await req.json();
 
     const priceMap: Record<string, string | undefined> = {
-      starter: process.env.STRIPE_PRICE_ID_STARTER,
-      professional: process.env.STRIPE_PRICE_ID_PROFESSIONAL,
+      starter: process.env.STRIPE_PRICE_ID_STARTER?.trim(),
+      professional: process.env.STRIPE_PRICE_ID_PROFESSIONAL?.trim(),
     };
 
     const stripePriceId = priceMap[priceId];
@@ -15,7 +15,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Invalid price tier" }, { status: 400 });
     }
 
-    const baseUrl = process.env.NEXT_PUBLIC_URL || "http://localhost:3000";
+    const baseUrl = (process.env.NEXT_PUBLIC_URL || "http://localhost:3000").trim();
     const stripe = getStripe();
 
     const session = await stripe.checkout.sessions.create({

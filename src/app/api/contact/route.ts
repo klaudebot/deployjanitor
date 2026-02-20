@@ -12,20 +12,21 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    const smtpUser = process.env.SMTP_USER?.trim();
     const transporter = nodemailer.createTransport({
       host: "smtp.office365.com",
       port: 587,
       secure: false,
       auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
+        user: smtpUser,
+        pass: process.env.SMTP_PASS?.trim(),
       },
     });
 
     await transporter.sendMail({
-      from: process.env.SMTP_USER,
+      from: smtpUser,
       replyTo: email,
-      to: process.env.SMTP_USER,
+      to: smtpUser,
       subject: `New inquiry from ${name}${budget ? ` — ${budget}` : ""}`,
       text: `Name: ${name}\nEmail: ${email}\nBudget: ${budget || "Not specified"}\n\nMessage:\n${message}`,
       html: `
