@@ -1,21 +1,22 @@
 import { NextRequest, NextResponse } from "next/server";
-import { stripe } from "@/lib/stripe";
-
-const PRICE_MAP: Record<string, string | undefined> = {
-  starter: process.env.STRIPE_PRICE_ID_STARTER,
-  professional: process.env.STRIPE_PRICE_ID_PROFESSIONAL,
-};
+import { getStripe } from "@/lib/stripe";
 
 export async function POST(req: NextRequest) {
   try {
     const { priceId } = await req.json();
 
-    const stripePriceId = PRICE_MAP[priceId];
+    const priceMap: Record<string, string | undefined> = {
+      starter: process.env.STRIPE_PRICE_ID_STARTER,
+      professional: process.env.STRIPE_PRICE_ID_PROFESSIONAL,
+    };
+
+    const stripePriceId = priceMap[priceId];
     if (!stripePriceId) {
       return NextResponse.json({ error: "Invalid price tier" }, { status: 400 });
     }
 
     const baseUrl = process.env.NEXT_PUBLIC_URL || "http://localhost:3000";
+    const stripe = getStripe();
 
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
