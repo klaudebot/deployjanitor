@@ -49,7 +49,7 @@ export default function Contact() {
         </div>
 
         {status === "sent" ? (
-          <div className="bg-green-50 border border-green-200  p-8 text-center">
+          <div className="bg-green-50 border border-green-200 p-8 text-center">
             <CheckCircle size={40} className="text-success mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-text-primary mb-2">
               Message sent
@@ -83,7 +83,7 @@ export default function Contact() {
                   onChange={(e) =>
                     setForm({ ...form, name: e.target.value })
                   }
-                  className="w-full  border border-border bg-white px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-colors"
+                  className="w-full border border-border bg-white px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-colors"
                   placeholder="Your name"
                 />
               </div>
@@ -102,7 +102,7 @@ export default function Contact() {
                   onChange={(e) =>
                     setForm({ ...form, email: e.target.value })
                   }
-                  className="w-full  border border-border bg-white px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-colors"
+                  className="w-full border border-border bg-white px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-colors"
                   placeholder="you@company.com"
                 />
               </div>
@@ -122,7 +122,7 @@ export default function Contact() {
                 onChange={(e) =>
                   setForm({ ...form, budget: e.target.value })
                 }
-                className="w-full  border border-border bg-white px-4 py-2.5 text-sm text-text-primary focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-colors"
+                className="w-full border border-border bg-white px-4 py-2.5 text-sm text-text-primary focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-colors"
               >
                 <option value="">Select a range</option>
                 <option value="Starter ($499)">Starter ($499)</option>
@@ -151,7 +151,7 @@ export default function Contact() {
                 onChange={(e) =>
                   setForm({ ...form, message: e.target.value })
                 }
-                className="w-full  border border-border bg-white px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-colors resize-none"
+                className="w-full border border-border bg-white px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-colors resize-none"
                 placeholder="What did the AI build? What's not working? What frameworks/languages are involved?"
               />
             </div>
@@ -174,7 +174,7 @@ export default function Contact() {
             <button
               type="submit"
               disabled={status === "sending"}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-accent text-white  px-6 py-3 font-semibold hover:bg-accent-hover transition-colors shadow-sm disabled:opacity-60 disabled:cursor-not-allowed text-sm"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-accent text-white px-6 py-3 font-semibold hover:bg-accent-hover transition-colors shadow-sm disabled:opacity-60 disabled:cursor-not-allowed text-sm"
             >
               {status === "sending" ? (
                 "Sending..."

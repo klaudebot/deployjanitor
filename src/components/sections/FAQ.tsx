@@ -24,11 +24,12 @@ export default function FAQ() {
           {FAQ_ITEMS.map((item, i) => (
             <div
               key={i}
-              className="border border-border  overflow-hidden"
+              className="border border-border overflow-hidden"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
                 className="w-full flex items-center justify-between px-6 py-4 text-left hover:bg-surface/50 transition-colors"
+                aria-expanded={openIndex === i}
               >
                 <span className="font-semibold text-text-primary text-sm pr-4">
                   {item.question}

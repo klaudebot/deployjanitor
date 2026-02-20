@@ -19,6 +19,8 @@ export default function Pricing() {
       const data = await res.json();
       if (data.url) {
         window.location.href = data.url;
+      } else {
+        setLoadingTier(null);
       }
     } catch (err) {
       console.error("Checkout error:", err);

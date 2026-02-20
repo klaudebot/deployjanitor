@@ -23,9 +23,9 @@ export default function Services() {
             return (
               <div
                 key={service.title}
-                className="bg-white  border border-border p-6 hover:border-accent-border hover:shadow-md transition-all"
+                className="bg-white border border-border p-6 hover:border-accent-border hover:shadow-md transition-all"
               >
-                <div className="w-10 h-10  bg-accent-subtle flex items-center justify-center mb-4">
+                <div className="w-10 h-10 bg-accent-subtle flex items-center justify-center mb-4">
                   <Icon size={20} className="text-accent" />
                 </div>
                 <h3 className="text-xl font-semibold text-text-primary mb-2">
