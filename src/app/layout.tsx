@@ -15,7 +15,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Code Janitor — Your AI Wrote the Code. We Make It Actually Work.",
+  title: "Deploy Janitor — Your AI Wrote the Code. We Make It Actually Work.",
   description:
     "Professional code review and fixing service for AI-generated codebases. Security audits, performance optimization, refactoring, and test coverage.",
 };

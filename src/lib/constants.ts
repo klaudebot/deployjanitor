@@ -161,14 +161,14 @@ export interface Testimonial {
 export const TESTIMONIALS: Testimonial[] = [
   {
     quote:
-      "We had Copilot generate our entire REST API. It worked in dev but was riddled with SQL injection vulnerabilities. Code Janitor caught every one and refactored our data layer properly.",
+      "We had Copilot generate our entire REST API. It worked in dev but was riddled with SQL injection vulnerabilities. Deploy Janitor caught every one and refactored our data layer properly.",
     author: "Sarah Chen",
     role: "CTO",
     company: "Meridian Health",
   },
   {
     quote:
-      "ChatGPT built our Next.js app in a weekend. It took Code Janitor two days to make it production-ready — proper error boundaries, auth middleware, and actual test coverage.",
+      "ChatGPT built our Next.js app in a weekend. It took Deploy Janitor two days to make it production-ready — proper error boundaries, auth middleware, and actual test coverage.",
     author: "Marcus Rivera",
     role: "Lead Developer",
     company: "Stackline",
