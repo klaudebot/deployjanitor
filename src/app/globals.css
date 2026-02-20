@@ -28,10 +28,15 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+}
 
-  a, button, select, [role="button"] {
-    cursor: pointer;
-  }
+/* Tailwind v4 removed cursor:pointer from preflight — restore it globally.
+   This is unlayered so it beats all @layer rules in the cascade. */
+html a,
+html button,
+html select,
+html [role="button"] {
+  cursor: pointer;
 }
 
 .dot-grid {
