@@ -48,13 +48,23 @@ export async function POST(req: NextRequest) {
 }
 
 async function handleCheckoutComplete(session: Stripe.Checkout.Session) {
+  const stripe = getStripe();
   const customerEmail = session.customer_details?.email;
   const amountPaid = session.amount_total
     ? `$${(session.amount_total / 100).toFixed(2)}`
     : "Unknown";
 
+  // Fetch line items to determine the tier purchased
+  let tierName = "Unknown";
+  try {
+    const lineItems = await stripe.checkout.sessions.listLineItems(session.id);
+    tierName = lineItems.data.map((item) => item.description).join(", ") || "Unknown";
+  } catch (err) {
+    console.error("Failed to fetch line items:", err);
+  }
+
   console.log(
-    `Payment received: ${amountPaid} from ${customerEmail || "unknown"}`
+    `Payment received: ${amountPaid} (${tierName}) from ${customerEmail || "unknown"}`
   );
 
   // Notify yourself of the new order
@@ -73,9 +83,10 @@ async function handleCheckoutComplete(session: Stripe.Checkout.Session) {
     await transporter.sendMail({
       from: smtpUser,
       to: smtpUser,
-      subject: `New order: ${amountPaid} from ${customerEmail || "unknown"}`,
+      subject: `New order: ${tierName} — ${amountPaid} from ${customerEmail || "unknown"}`,
       html: `
         <h2>New Deploy Janitor Order</h2>
+        <p><strong>Tier:</strong> ${tierName}</p>
         <p><strong>Amount:</strong> ${amountPaid}</p>
         <p><strong>Customer Email:</strong> ${customerEmail || "Not provided"}</p>
         <p><strong>Session ID:</strong> ${session.id}</p>
