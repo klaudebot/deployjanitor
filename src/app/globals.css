@@ -30,14 +30,6 @@
   }
 }
 
-/* Tailwind v4 removed cursor:pointer from preflight — restore it globally.
-   This is unlayered so it beats all @layer rules in the cascade. */
-html a,
-html button,
-html select,
-html [role="button"] {
-  cursor: pointer;
-}
 
 .dot-grid {
   background-image: radial-gradient(circle, #e2e8f0 1px, transparent 1px);

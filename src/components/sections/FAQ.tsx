@@ -28,7 +28,7 @@ export default function FAQ() {
             >
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                className="w-full flex items-center justify-between px-6 py-4 text-left hover:bg-surface/50 transition-colors"
+                className="w-full flex items-center justify-between px-6 py-4 text-left hover:bg-surface/50 transition-colors cursor-pointer"
                 aria-expanded={openIndex === i}
               >
                 <span className="font-semibold text-text-primary text-sm pr-4">

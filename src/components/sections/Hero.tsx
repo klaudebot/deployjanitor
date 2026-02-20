@@ -34,13 +34,13 @@ export default function Hero() {
             <div className="mt-8 flex flex-wrap gap-4">
               <a
                 href="#pricing"
-                className="inline-flex items-center gap-2 bg-accent text-white px-6 py-3 font-semibold hover:bg-accent-hover transition-colors shadow-sm"
+                className="inline-flex items-center gap-2 bg-accent text-white px-6 py-3 font-semibold hover:bg-accent-hover transition-colors shadow-sm cursor-pointer"
               >
                 Fix My Code <ArrowRight size={18} />
               </a>
               <a
                 href="#how-it-works"
-                className="inline-flex items-center gap-2 border border-border-strong bg-white text-text-secondary px-6 py-3 font-semibold hover:bg-surface transition-colors"
+                className="inline-flex items-center gap-2 border border-border-strong bg-white text-text-secondary px-6 py-3 font-semibold hover:bg-surface transition-colors cursor-pointer"
               >
                 See How It Works
               </a>

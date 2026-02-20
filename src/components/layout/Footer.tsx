@@ -16,10 +16,10 @@ export default function Footer() {
               Services
             </h4>
             <ul className="space-y-2 text-sm text-slate-300">
-              <li><a href="#services" className="hover:text-white transition-colors">Security Audit</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Performance</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Refactoring</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Test Coverage</a></li>
+              <li><a href="#services" className="hover:text-white transition-colors cursor-pointer">Security Audit</a></li>
+              <li><a href="#services" className="hover:text-white transition-colors cursor-pointer">Performance</a></li>
+              <li><a href="#services" className="hover:text-white transition-colors cursor-pointer">Refactoring</a></li>
+              <li><a href="#services" className="hover:text-white transition-colors cursor-pointer">Test Coverage</a></li>
             </ul>
           </div>
           <div>
@@ -27,9 +27,9 @@ export default function Footer() {
               Company
             </h4>
             <ul className="space-y-2 text-sm text-slate-300">
-              <li><a href="#pricing" className="hover:text-white transition-colors">Pricing</a></li>
-              <li><a href="#faq" className="hover:text-white transition-colors">FAQ</a></li>
-              <li><a href="#how-it-works" className="hover:text-white transition-colors">How It Works</a></li>
+              <li><a href="#pricing" className="hover:text-white transition-colors cursor-pointer">Pricing</a></li>
+              <li><a href="#faq" className="hover:text-white transition-colors cursor-pointer">FAQ</a></li>
+              <li><a href="#how-it-works" className="hover:text-white transition-colors cursor-pointer">How It Works</a></li>
             </ul>
           </div>
         </div>

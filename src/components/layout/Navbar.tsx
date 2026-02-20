@@ -37,7 +37,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <a href="#" className="text-xl font-bold text-text-primary">
+          <a href="#" className="text-xl font-bold text-text-primary cursor-pointer">
             Deploy Janitor
           </a>
 
@@ -46,21 +46,21 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors"
+                className="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors cursor-pointer"
               >
                 {link.label}
               </a>
             ))}
             <a
               href="#pricing"
-              className="bg-accent text-white px-5 py-2 text-sm font-semibold hover:bg-accent-hover transition-colors shadow-sm"
+              className="bg-accent text-white px-5 py-2 text-sm font-semibold hover:bg-accent-hover transition-colors shadow-sm cursor-pointer"
             >
               Get Started
             </a>
           </div>
 
           <button
-            className="md:hidden p-2"
+            className="md:hidden p-2 cursor-pointer"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label={mobileOpen ? "Close menu" : "Open menu"}
             aria-expanded={mobileOpen}
@@ -77,7 +77,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="block text-sm font-medium text-text-secondary hover:text-text-primary"
+                className="block text-sm font-medium text-text-secondary hover:text-text-primary cursor-pointer"
                 onClick={() => setMobileOpen(false)}
               >
                 {link.label}
@@ -85,7 +85,7 @@ export default function Navbar() {
             ))}
             <a
               href="#pricing"
-              className="block bg-accent text-white px-5 py-2 text-sm font-semibold text-center hover:bg-accent-hover"
+              className="block bg-accent text-white px-5 py-2 text-sm font-semibold text-center hover:bg-accent-hover cursor-pointer"
               onClick={() => setMobileOpen(false)}
             >
               Get Started

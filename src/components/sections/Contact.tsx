@@ -60,7 +60,7 @@ export default function Contact() {
             </p>
             <button
               onClick={() => setStatus("idle")}
-              className="mt-4 text-accent font-semibold hover:text-accent-hover transition-colors text-sm"
+              className="mt-4 text-accent font-semibold hover:text-accent-hover transition-colors text-sm cursor-pointer"
             >
               Send another message
             </button>
@@ -83,7 +83,7 @@ export default function Contact() {
                   onChange={(e) =>
                     setForm({ ...form, name: e.target.value })
                   }
-                  className="w-full border border-border bg-white px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-colors"
+                  className="w-full border border-border bg-white px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-colors cursor-text"
                   placeholder="Your name"
                 />
               </div>
@@ -102,7 +102,7 @@ export default function Contact() {
                   onChange={(e) =>
                     setForm({ ...form, email: e.target.value })
                   }
-                  className="w-full border border-border bg-white px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-colors"
+                  className="w-full border border-border bg-white px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-colors cursor-text"
                   placeholder="you@company.com"
                 />
               </div>
@@ -122,7 +122,7 @@ export default function Contact() {
                 onChange={(e) =>
                   setForm({ ...form, budget: e.target.value })
                 }
-                className="w-full border border-border bg-white px-4 py-2.5 text-sm text-text-primary focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-colors"
+                className="w-full border border-border bg-white px-4 py-2.5 text-sm text-text-primary focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-colors cursor-pointer"
               >
                 <option value="">Select a range</option>
                 <option value="Starter ($499)">Starter ($499)</option>
@@ -151,7 +151,7 @@ export default function Contact() {
                 onChange={(e) =>
                   setForm({ ...form, message: e.target.value })
                 }
-                className="w-full border border-border bg-white px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-colors resize-none"
+                className="w-full border border-border bg-white px-4 py-2.5 text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-colors resize-none cursor-text"
                 placeholder="What did the AI build? What's not working? What frameworks/languages are involved?"
               />
             </div>
@@ -163,7 +163,7 @@ export default function Contact() {
                   Something went wrong. Please try again or email us directly at{" "}
                   <a
                     href="mailto:hello@deployjanitor.com"
-                    className="underline"
+                    className="underline cursor-pointer"
                   >
                     hello@deployjanitor.com
                   </a>
@@ -174,7 +174,7 @@ export default function Contact() {
             <button
               type="submit"
               disabled={status === "sending"}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-accent text-white px-6 py-3 font-semibold hover:bg-accent-hover transition-colors shadow-sm disabled:opacity-60 disabled:cursor-not-allowed text-sm"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-accent text-white px-6 py-3 font-semibold hover:bg-accent-hover transition-colors shadow-sm disabled:opacity-60 disabled:cursor-not-allowed text-sm cursor-pointer"
             >
               {status === "sending" ? (
                 "Sending..."
