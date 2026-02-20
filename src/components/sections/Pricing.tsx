@@ -81,7 +81,7 @@ export default function Pricing() {
                 onClick={() =>
                   tier.priceId
                     ? handleCheckout(tier.priceId)
-                    : window.open("mailto:hello@deployjanitor.com", "_blank")
+                    : document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
                 }
                 className={cn(
                   "w-full rounded-lg px-6 py-3 font-semibold transition-colors text-sm",
