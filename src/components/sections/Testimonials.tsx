@@ -18,7 +18,7 @@ export default function Testimonials() {
           {TESTIMONIALS.map((t) => (
             <div
               key={t.author}
-              className="bg-white rounded-xl border border-border p-6"
+              className="bg-white  border border-border p-6"
             >
               <Quote size={24} className="text-accent/20 mb-4" />
               <p className="text-text-secondary leading-relaxed text-sm mb-6">

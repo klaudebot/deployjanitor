@@ -8,7 +8,7 @@ export default function Hero() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <div className="inline-flex items-center gap-2 bg-accent-subtle border border-accent-border rounded-full px-4 py-1.5 mb-8">
+            <div className="inline-flex items-center gap-2 bg-accent-subtle border border-accent-border px-4 py-1.5 mb-8">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-success" />
@@ -34,13 +34,13 @@ export default function Hero() {
             <div className="mt-8 flex flex-wrap gap-4">
               <a
                 href="#pricing"
-                className="inline-flex items-center gap-2 bg-accent text-white rounded-lg px-6 py-3 font-semibold hover:bg-accent-hover transition-colors shadow-sm"
+                className="inline-flex items-center gap-2 bg-accent text-white px-6 py-3 font-semibold hover:bg-accent-hover transition-colors shadow-sm"
               >
                 Fix My Code <ArrowRight size={18} />
               </a>
               <a
                 href="#how-it-works"
-                className="inline-flex items-center gap-2 border border-border-strong bg-white text-text-secondary rounded-lg px-6 py-3 font-semibold hover:bg-surface transition-colors"
+                className="inline-flex items-center gap-2 border border-border-strong bg-white text-text-secondary px-6 py-3 font-semibold hover:bg-surface transition-colors"
               >
                 See How It Works
               </a>
@@ -49,9 +49,9 @@ export default function Hero() {
 
           <div className="hidden lg:block">
             <div className="grid grid-cols-1 gap-4">
-              <div className="rounded-xl border border-red-200 bg-red-50/50 overflow-hidden">
+              <div className="border border-red-200 bg-red-50/50 overflow-hidden">
                 <div className="flex items-center gap-2 px-4 py-2 bg-red-100/60 border-b border-red-200">
-                  <span className="w-3 h-3 rounded-full bg-red-400" />
+                  <span className="w-3 h-3 bg-red-400" />
                   <span className="text-xs font-semibold text-red-600 uppercase tracking-wider">
                     Before — AI Generated
                   </span>
@@ -60,9 +60,9 @@ export default function Hero() {
                   <code>{BEFORE_CODE}</code>
                 </pre>
               </div>
-              <div className="rounded-xl border border-green-200 bg-green-50/50 overflow-hidden">
+              <div className="border border-green-200 bg-green-50/50 overflow-hidden">
                 <div className="flex items-center gap-2 px-4 py-2 bg-green-100/60 border-b border-green-200">
-                  <span className="w-3 h-3 rounded-full bg-success" />
+                  <span className="w-3 h-3 bg-success" />
                   <span className="text-xs font-semibold text-green-700 uppercase tracking-wider">
                     After — Production Ready
                   </span>

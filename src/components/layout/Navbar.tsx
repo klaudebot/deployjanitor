@@ -42,7 +42,7 @@ export default function Navbar() {
             ))}
             <a
               href="#pricing"
-              className="bg-accent text-white rounded-lg px-5 py-2 text-sm font-semibold hover:bg-accent-hover transition-colors shadow-sm"
+              className="bg-accent text-white px-5 py-2 text-sm font-semibold hover:bg-accent-hover transition-colors shadow-sm"
             >
               Get Started
             </a>
@@ -73,7 +73,7 @@ export default function Navbar() {
             ))}
             <a
               href="#pricing"
-              className="block bg-accent text-white rounded-lg px-5 py-2 text-sm font-semibold text-center hover:bg-accent-hover"
+              className="block bg-accent text-white px-5 py-2 text-sm font-semibold text-center hover:bg-accent-hover"
               onClick={() => setMobileOpen(false)}
             >
               Get Started

@@ -22,7 +22,7 @@ export default function Problem() {
           {STATS.map((stat) => (
             <div
               key={stat.value}
-              className="bg-white rounded-xl border border-border p-6 text-center"
+              className="bg-white  border border-border p-6 text-center"
             >
               <p className="text-4xl font-extrabold text-accent mb-2">
                 {stat.value}

@@ -41,14 +41,14 @@ export default function Pricing() {
             <div
               key={tier.name}
               className={cn(
-                "rounded-xl border p-8 flex flex-col",
+                " border p-8 flex flex-col",
                 tier.featured
                   ? "border-accent bg-white shadow-lg relative"
                   : "border-border bg-white"
               )}
             >
               {tier.featured && (
-                <div className="absolute -top-px left-0 right-0 h-1 gradient-accent rounded-t-xl" />
+                <div className="absolute -top-px left-0 right-0 h-1 gradient-accent " />
               )}
               <div className="mb-6">
                 <h3 className="text-lg font-semibold text-text-primary">
@@ -84,7 +84,7 @@ export default function Pricing() {
                     : document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
                 }
                 className={cn(
-                  "w-full rounded-lg px-6 py-3 font-semibold transition-colors text-sm cursor-pointer relative z-10",
+                  "w-full  px-6 py-3 font-semibold transition-colors text-sm cursor-pointer relative z-10",
                   tier.featured
                     ? "bg-accent text-white hover:bg-accent-hover shadow-sm"
                     : "border border-border-strong bg-white text-text-secondary hover:bg-surface"

@@ -24,7 +24,7 @@ export default function FAQ() {
           {FAQ_ITEMS.map((item, i) => (
             <div
               key={i}
-              className="border border-border rounded-xl overflow-hidden"
+              className="border border-border  overflow-hidden"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}

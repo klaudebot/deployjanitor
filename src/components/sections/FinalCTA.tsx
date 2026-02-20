@@ -14,13 +14,13 @@ export default function FinalCTA() {
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <a
             href="#pricing"
-            className="inline-flex items-center gap-2 bg-white text-dark-bg rounded-lg px-6 py-3 font-semibold hover:bg-slate-100 transition-colors"
+            className="inline-flex items-center gap-2 bg-white text-dark-bg  px-6 py-3 font-semibold hover:bg-slate-100 transition-colors"
           >
             Get Started <ArrowRight size={18} />
           </a>
           <a
             href="#how-it-works"
-            className="inline-flex items-center gap-2 border border-slate-600 text-slate-300 rounded-lg px-6 py-3 font-semibold hover:bg-dark-surface transition-colors"
+            className="inline-flex items-center gap-2 border border-slate-600 text-slate-300  px-6 py-3 font-semibold hover:bg-dark-surface transition-colors"
           >
             Learn More
           </a>
