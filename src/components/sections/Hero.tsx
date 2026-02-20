@@ -10,8 +10,8 @@ export default function Hero() {
           <div>
             <div className="inline-flex items-center gap-2 bg-accent-subtle border border-accent-border px-4 py-1.5 mb-8">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-success" />
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
               </span>
               <span className="text-xs font-semibold tracking-widest uppercase text-accent">
                 Now accepting projects

@@ -7,7 +7,7 @@ export default function FinalCTA() {
         <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white">
           Ready to ship code you&apos;re proud of?
         </h2>
-        <p className="mt-4 text-lg leading-relaxed text-slate-400 max-w-xl mx-auto">
+        <p className="mt-4 text-lg leading-relaxed text-slate-400/80 max-w-xl mx-auto">
           Stop worrying about what your AI left behind. Let our engineers
           transform your codebase into something production-ready.
         </p>
@@ -20,7 +20,7 @@ export default function FinalCTA() {
           </a>
           <a
             href="#how-it-works"
-            className="inline-flex items-center gap-2 border border-slate-600 text-slate-300 px-6 py-3 font-semibold hover:bg-dark-surface transition-colors cursor-pointer"
+            className="inline-flex items-center gap-2 border border-slate-700 text-slate-300 px-6 py-3 font-semibold hover:bg-dark-surface transition-colors cursor-pointer"
           >
             Learn More
           </a>

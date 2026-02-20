@@ -36,7 +36,7 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="border-t border-slate-800 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+        <div className="border-t border-slate-800/60 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
           <span>&copy; {new Date().getFullYear()} Deploy Janitor. All rights reserved.</span>
           <div className="flex gap-6">
             <Link href="/privacy" className="hover:text-slate-300 transition-colors">

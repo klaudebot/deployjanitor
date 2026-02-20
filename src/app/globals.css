@@ -2,20 +2,20 @@
 
 @theme {
   --color-background: #ffffff;
-  --color-surface: #f9fafb;
-  --color-surface-raised: #f3f4f6;
+  --color-surface: #f7f8fc;
+  --color-surface-raised: #eef0f6;
   --color-border: #e5e7eb;
   --color-border-strong: #d1d5db;
   --color-text-primary: #0f172a;
   --color-text-secondary: #475569;
   --color-text-muted: #94a3b8;
-  --color-accent: #10b981;
-  --color-accent-hover: #059669;
-  --color-accent-subtle: #ecfdf5;
-  --color-accent-border: #a7f3d0;
-  --color-success: #16a34a;
-  --color-dark-bg: #0f172a;
-  --color-dark-surface: #1e293b;
+  --color-accent: #4f6df5;
+  --color-accent-hover: #3b5ae0;
+  --color-accent-subtle: #eef1fd;
+  --color-accent-border: #c4cef8;
+  --color-success: #22c55e;
+  --color-dark-bg: #0b1120;
+  --color-dark-surface: #162032;
   --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
@@ -32,12 +32,12 @@
 
 
 .dot-grid {
-  background-image: radial-gradient(circle, #e2e8f0 1px, transparent 1px);
+  background-image: radial-gradient(circle, #dde1ef 1px, transparent 1px);
   background-size: 28px 28px;
 }
 
 .gradient-accent {
-  background: linear-gradient(90deg, #10b981, #14b8a6);
+  background: linear-gradient(90deg, #4f6df5, #7c5bf0);
 }
 
 .legal-prose h2 {
