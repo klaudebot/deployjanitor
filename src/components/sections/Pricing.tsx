@@ -1,11 +1,15 @@
 "use client";
 
-import { Check } from "lucide-react";
+import { useState } from "react";
+import { Check, Loader2 } from "lucide-react";
 import { PRICING_TIERS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
 export default function Pricing() {
+  const [loadingTier, setLoadingTier] = useState<string | null>(null);
+
   const handleCheckout = async (priceId: string) => {
+    setLoadingTier(priceId);
     try {
       const res = await fetch("/api/checkout", {
         method: "POST",
@@ -18,6 +22,7 @@ export default function Pricing() {
       }
     } catch (err) {
       console.error("Checkout error:", err);
+      setLoadingTier(null);
     }
   };
 
@@ -37,63 +42,74 @@ export default function Pricing() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {PRICING_TIERS.map((tier) => (
-            <div
-              key={tier.name}
-              className={cn(
-                " border p-8 flex flex-col",
-                tier.featured
-                  ? "border-accent bg-white shadow-lg relative"
-                  : "border-border bg-white"
-              )}
-            >
-              {tier.featured && (
-                <div className="absolute -top-px left-0 right-0 h-1 gradient-accent " />
-              )}
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-text-primary">
-                  {tier.name}
-                </h3>
-                <p className="text-text-muted text-sm mt-1">
-                  {tier.description}
-                </p>
-              </div>
-              <div className="mb-6">
-                <span className="text-4xl font-extrabold text-text-primary">
-                  {tier.price}
-                </span>
-                <span className="text-text-muted text-sm ml-2">
-                  {tier.period}
-                </span>
-              </div>
-              <ul className="space-y-3 mb-8 flex-1">
-                {tier.features.map((feature) => (
-                  <li key={feature} className="flex items-start gap-3 text-sm">
-                    <Check
-                      size={16}
-                      className="text-success mt-0.5 shrink-0"
-                    />
-                    <span className="text-text-secondary">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              <button
-                onClick={() =>
-                  tier.priceId
-                    ? handleCheckout(tier.priceId)
-                    : document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
-                }
+          {PRICING_TIERS.map((tier) => {
+            const isLoading = loadingTier === tier.priceId;
+            return (
+              <div
+                key={tier.name}
                 className={cn(
-                  "w-full  px-6 py-3 font-semibold transition-colors text-sm cursor-pointer relative z-10",
+                  "border p-8 flex flex-col",
                   tier.featured
-                    ? "bg-accent text-white hover:bg-accent-hover shadow-sm"
-                    : "border border-border-strong bg-white text-text-secondary hover:bg-surface"
+                    ? "border-accent bg-white shadow-lg relative"
+                    : "border-border bg-white"
                 )}
               >
-                {tier.cta}
-              </button>
-            </div>
-          ))}
+                {tier.featured && (
+                  <div className="absolute -top-px left-0 right-0 h-1 gradient-accent" />
+                )}
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-text-primary">
+                    {tier.name}
+                  </h3>
+                  <p className="text-text-muted text-sm mt-1">
+                    {tier.description}
+                  </p>
+                </div>
+                <div className="mb-6">
+                  <span className="text-4xl font-extrabold text-text-primary">
+                    {tier.price}
+                  </span>
+                  <span className="text-text-muted text-sm ml-2">
+                    {tier.period}
+                  </span>
+                </div>
+                <ul className="space-y-3 mb-8 flex-1">
+                  {tier.features.map((feature) => (
+                    <li key={feature} className="flex items-start gap-3 text-sm">
+                      <Check
+                        size={16}
+                        className="text-success mt-0.5 shrink-0"
+                      />
+                      <span className="text-text-secondary">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <button
+                  disabled={isLoading}
+                  onClick={() =>
+                    tier.priceId
+                      ? handleCheckout(tier.priceId)
+                      : document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
+                  }
+                  className={cn(
+                    "w-full px-6 py-3 font-semibold transition-colors text-sm cursor-pointer relative z-10 disabled:opacity-60 disabled:cursor-wait",
+                    tier.featured
+                      ? "bg-accent text-white hover:bg-accent-hover shadow-sm"
+                      : "border border-border-strong bg-white text-text-secondary hover:bg-surface"
+                  )}
+                >
+                  {isLoading ? (
+                    <span className="inline-flex items-center gap-2">
+                      <Loader2 size={16} className="animate-spin" />
+                      Redirecting...
+                    </span>
+                  ) : (
+                    tier.cta
+                  )}
+                </button>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
