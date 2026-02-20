@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -35,8 +36,16 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="border-t border-slate-800 mt-12 pt-8 text-center text-sm text-slate-500">
-          &copy; {new Date().getFullYear()} Deploy Janitor. All rights reserved.
+        <div className="border-t border-slate-800 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+          <span>&copy; {new Date().getFullYear()} Deploy Janitor. All rights reserved.</span>
+          <div className="flex gap-6">
+            <Link href="/privacy" className="hover:text-slate-300 transition-colors">
+              Privacy Policy
+            </Link>
+            <Link href="/terms" className="hover:text-slate-300 transition-colors">
+              Terms of Service
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
