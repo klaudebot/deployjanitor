@@ -1,10 +1,12 @@
+import Image from "next/image";
+
 export default function Footer() {
   return (
     <footer className="bg-dark-bg text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="md:col-span-2">
-            <h3 className="text-xl font-bold mb-3">Deploy Janitor</h3>
+            <Image src="/logo.png" alt="Deploy Janitor" width={180} height={45} className="mb-3 brightness-0 invert" />
             <p className="text-slate-400 text-sm leading-relaxed max-w-md">
               Professional code review and fixing for AI-generated codebases.
               We turn broken AI output into production-ready, secure, and

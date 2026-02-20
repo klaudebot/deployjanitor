@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { NAV_LINKS } from "@/lib/constants";
 import { cn } from "@/lib/utils";
@@ -37,8 +38,8 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <a href="#" className="text-xl font-bold text-text-primary cursor-pointer">
-            Deploy Janitor
+          <a href="#" className="cursor-pointer">
+            <Image src="/logo.png" alt="Deploy Janitor" width={180} height={45} priority />
           </a>
 
           <div className="hidden md:flex items-center gap-8">
